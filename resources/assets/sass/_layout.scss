@@ -1,0 +1,294 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Khula:400italic,700italic,400,700);
+
+// Font Variables
+$header-font: 'Khula', sans-serif;
+$body-font: 'Khula', sans-serif;
+
+// Body
+body {
+  font-family: $body-font;
+  font-weight: normal;
+  color: #000000;
+}
+
+.body {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  color: black;
+  padding-bottom: 40px;
+}
+
+body {
+  background: url('/img/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.body-haze {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.page-contents {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.3em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  font-weight: normal;
+}
+
+.container {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.color-red {
+  color:red;
+}
+
+.color-green {
+  color: #008900;
+}
+
+
+/* Modal */
+
+//.modal-mask {
+//  position: fixed;
+//  z-index: 9998;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background-color: rgba(0, 0, 0, .5);
+//  display: table;
+//  transition: opacity .3s ease;
+//}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 400px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.nav-bar {
+  margin-top: 20px;
+}
+
+.home-title {
+  margin-top: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navbar-right {
+  text-align: right;
+}
+
+.navbar-nav > li > a {
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #696b6b;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 800;
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  padding: 14px 30px;
+}
+
+.navbar-right {
+  margin-right: 15px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-avatar {
+  height: 25px;
+}
+
+.panel-heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a.nav-link.router-link-exact-active.nav-active {
+  color: #c0ff00;
+}
+
+.panel {
+  padding-bottom: 20px;
+}
+
+$panel-primary-heading-bg: #CECECE;
+$panel-primary-border: #CECECE;
+$panel-primary-text: black;
+
+//.panel-primary {
+//  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+//}
+
+.home24-verb {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.breathe {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.breathe-top-10 {
+  margin-top: 10px;
+}
+
+.breathe-top-20 {
+  margin-top: 20px;
+}
+
+.breathe-top-30 {
+  margin-top: 30px;
+}
+
+.breathe-top-40 {
+  margin-top: 40px;
+}
+
+.breathe-top-60 {
+  margin-top: 60px;
+}
+
+.breathe-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.breathe-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.breathe-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.breathe-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.breathe-bottom-60 {
+  margin-bottom: 60px;
+}
+
+h6, .h6 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.top-buffer {
+  margin-top: 15px;
+}
+
+td.small-font {
+  font-size: 0.8em;
+  word-break: break-all;
+}
+
+[v-cloak] > * { display:none }
+
+.card-bg-opacity-60 {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.min-height-80 {
+  min-height: 100px;
+}
+
+.report-questions {
+  h3 {
+    margin-top: 60px;
+  }
+}
+
+.small-inputs {
+  input {
+    width: 7rem;
+  }
+
+  input:disabled {
+    background: #dddddd;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.font-sm {
+  font-size: 0.8rem;
+}

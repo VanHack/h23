@@ -1,0 +1,4 @@
+parser: flow
+tab-width: 4
+semi: false
+trailingComma: all
