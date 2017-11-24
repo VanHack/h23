@@ -35,8 +35,10 @@ require("bootstrap-social")
 
 /**
  * FontAwesome
+ *
+ * Disabled temporarily
  */
-require("../../../node_modules/font-awesome/scss/font-awesome.scss")
+// require("../../../node_modules/font-awesome/scss/font-awesome.scss")
 
 /**
  * Vue Grecaptcha
