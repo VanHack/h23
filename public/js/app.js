@@ -93828,7 +93828,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         __mounted: function __mounted() {
-            console.log('NavBar mounted --------- ', this.$store.state && this.$store.state.mounted);
             return this.$store.state && this.$store.state.mounted;
         },
         t: function t(message) {

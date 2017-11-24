@@ -85,7 +85,6 @@
 
         methods: {
             __mounted() {
-                console.log('NavBar mounted --------- ', this.$store.state && this.$store.state.mounted);
                 return this.$store.state && this.$store.state.mounted;
             },
 
