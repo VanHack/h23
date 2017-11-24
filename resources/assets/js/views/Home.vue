@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
 
-                                <div v-if="_currentArtist.events.length == 0" class="row breathe-top-40 font-sm">
+                                <div v-if="_currentArtist.events && _currentArtist.events.length == 0" class="row breathe-top-40 font-sm">
                                     <div class="col-12 text-center breathe-top-60">
                                         <h3>
                                             There are no upcoming events for this artist
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
 
-                                <div v-if="_currentArtist.events.length > 0" class="row breathe-top-40 font-sm">
+                                <div v-if="_currentArtist.events && _currentArtist.events.length > 0" class="row breathe-top-40 font-sm">
                                     <div class="col-12">
                                         <h4 class="text-right">Events</h4>
                                         <table class="table">
