@@ -68,8 +68,17 @@
                                     </div>
                                 </div>
 
-                                <div class="row breathe-top-40 font-sm">
+                                <div v-if="_currentArtist.events.length == 0" class="row breathe-top-40 font-sm">
+                                    <div class="col-12 text-center breathe-top-60">
+                                        <h3>
+                                            There are no upcoming events for this artist
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <div v-if="_currentArtist.events.length > 0" class="row breathe-top-40 font-sm">
                                     <div class="col-12">
+                                        <h4 class="text-right">Events</h4>
                                         <table class="table">
                                             <thead>
                                                 <tr>
@@ -145,12 +154,6 @@
                 ;
             },
 
-            __setCurrentArtist(data) {
-               this.$store.commit('homeSetCurrentArtist', data)
-
-               this._loadCurrentArtistEvents();
-            },
-
             __setCurrentArtistEvents(events) {
                 this.$store.commit('homeSetCurrentArtistEvents', events)
             },
@@ -160,7 +163,7 @@
                     this._searchRunning = true;
 
                     axios.get(this.__makeSearchUrl())
-                        .then(success => this.__setCurrentArtist({ data: success.data, events: null }))
+                        .then(success => this.__selectArtist({ data: success.data, events: null }))
                         .catch(error => dd('Error occurred: ', error))
                         .then(success => this._searchRunning = false)
                     ;
@@ -195,6 +198,8 @@
 
             __selectArtist(artist) {
                 this.$store.dispatch('homeSelectArtistAction', artist)
+
+                this._loadCurrentArtistEvents();
             },
 
             __artistIsCurrent(artist) {
