@@ -93683,6 +93683,8 @@ Vue.component("nav-bar", __webpack_require__(516));
 
 Vue.component("captcha", __webpack_require__(536));
 
+Vue.component("panel", __webpack_require__(519));
+
 /***/ }),
 /* 513 */,
 /* 514 */,
@@ -94025,9 +94027,107 @@ if (false) {
 }
 
 /***/ }),
-/* 519 */,
-/* 520 */,
-/* 521 */,
+/* 519 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(520)
+/* template */
+var __vue_template__ = __webpack_require__(521)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/app/Panel.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-19203d22", Component.options)
+  } else {
+    hotAPI.reload("data-v-19203d22", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 520 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['heading', 'showHeading'],
+
+    computed: {
+        _showHeading: function _showHeading() {
+            return typeof this.showHeading == 'undefined' ? true : this.showHeading;
+        }
+    }
+});
+
+/***/ }),
+/* 521 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card panel-primary card-bg-opacity-60" }, [
+    _vm._showHeading
+      ? _c("div", { staticClass: "card-header" }, [_vm._v(_vm._s(_vm.heading))])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-19203d22", module.exports)
+  }
+}
+
+/***/ }),
 /* 522 */,
 /* 523 */,
 /* 524 */,
@@ -100213,7 +100313,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("panel", { attrs: { showHeading: false } }, [
+  return _c("div", { attrs: { showHeading: false } }, [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-2" }, [
         _c("div", { staticClass: "row col-12" }, [
@@ -100262,7 +100362,7 @@ var render = function() {
               {
                 key: like.data.id,
                 class:
-                  "pointer card" +
+                  "pointer card breathe-bottom-10" +
                   (_vm.__artistIsCurrent(like) ? " bg-light" : ""),
                 on: {
                   click: function($event) {
@@ -100380,25 +100480,7 @@ var render = function() {
                     _c("div", { staticClass: "row breathe-top-40 font-sm" }, [
                       _c("div", { staticClass: "col-12" }, [
                         _c("table", { staticClass: "table" }, [
-                          _c("thead", [
-                            _c("tr", [
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Venue")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("City")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Country")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Date")
-                              ])
-                            ])
-                          ]),
+                          _vm._m(0),
                           _vm._v(" "),
                           _c(
                             "tbody",
@@ -100426,7 +100508,24 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Venue")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("City")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Country")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Date")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

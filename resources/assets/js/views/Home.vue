@@ -1,5 +1,5 @@
 <template>
-    <panel :showHeading="false">
+    <div :showHeading="false">
         <div class="row">
             <div class="col-2">
                 <div class="row col-12">
@@ -10,7 +10,7 @@
                 </div>
                 
                 <div class="row col-12 breathe-top-20">
-                    <div @click="__selectArtist(like)" v-for="like in _likes" :key="like.data.id" :class="'pointer card' + (__artistIsCurrent(like) ? ' bg-light' : '')">
+                    <div @click="__selectArtist(like)" v-for="like in _likes" :key="like.data.id" :class="'pointer card breathe-bottom-10' + (__artistIsCurrent(like) ? ' bg-light' : '')">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-6">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-    </panel>
+    </div>
 </template>
 
 <script>
